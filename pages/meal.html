@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.tlm.cloud/fontawesome/5.15.2/css/all.css"
+        integrity="sha384-+2e4h68pmq1jygCMJInB7m4qQ8/KId/WkeL2Qcg3YjJqYqjtUV1hk6CZm3SM+I2V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.tlm.cloud/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/style.css">
+    <title>Meals</title>
+</head>
+
+<body>
+    <div class="container-fluid ">
+        <!--Header Title Area-->
+        <div>
+            <div class=" justify-content-center align-items-center topOfPage">
+                <h1 class="pageTitle" id="mealsPageTitle">Meals</h1>
+            </div>
+            <!--Navbar Area-->
+            <div class="navbar navbar-dark navbar-expand-md " id="navBarStyle">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center navbar-nav" id="navbarToggler">
+                    <a class="nav-item nav-link active" href="../index.html">Home</a>
+                    <a class="nav-item nav-link" href="#">Meals</a>
+                    <a class="nav-item nav-link" href="./menu.html">Your Menu</a>
+                    <a class="nav-item nav-link" href="./shoppingList.html">Shopping List</a>
+                </div>
+            </div>
+        </div>
+        <!--end of container-->
+        <!-- div for instructions for this page-->
+        <div class="row justify-content-center">
+            <i class="mt-4 fa fa-2x fa-utensils"></i>
+            <h6 class="userInstructions text-center col-md-6">Browse our preset Meals and choose 7 diners for your week.
+                You can click the "See Recipe" link to see the details of the meal. If you dont see something your
+                really craving this week you can add your own recipe below in our Add Your Recipe Section. After you
+                have selected your 7 prefered meals your then click the"Create My Menu" button to set your menu for the
+                week and take you to your menu page</h6><i class="mt-4 fa fa-2x fa-utensils"></i>
+        </div>
+    </div>
+    <!--div to insert created recipes and meals from javascript to display fopr users to select meals for their menu-->
+    <div id="mealOptions" class="justify-content-center"></div>
+    <!--Div to display how many meals user has selected-->
+    <div id="numberOfMealsUserSelected" class='row justify-content-center'>
+        <p id="displayNumberOfMealsSelected"></p>
+    </div>
+    <!--div and row to hold the create your menu for menu page-->
+    <div class="row justify-content-center">
+        <button id="createMenu"><a class="nav-link" href="#">Create/Set your Menu</a> </button>
+    </div>
+    <!--creating alert div to pop up when user did not select meals to create a menu-->
+    <div class="hidden align-items-center text-center" id="alertUserToSelectMeals">
+        <h1 id="alert" class="mt-5">You must select at least one meal to create a menu</h1>
+        <div class="row justify-content-center mt-4">
+            <button id="goBackToSelectmealsButton">Back To Meals</button>
+        </div>
+    </div>
+    <!--div to hold recipe ingredients and instructions to pop up when link is clicked-->
+    <div id="recipeIngredientsInstructions" class="hidden">
+        <div class='row justify-content-center'>
+            <div class="col-lg-6" id="ingredientsDiv"></div>
+            <div class="col-lg-6 justify-content-center" id="instructionsDiv"></div>
+        </div>
+        <div class="row justify-content-center">
+            <button id="close">Close</button>
+        </div>
+    </div>
+    <!--creating div for heading for form for yuser to create own reciope and divide the page for est ui-->
+    <div class="row justify-content-center" id="addYourOwnRecipeDiv">
+        <h2 id="addOwnrecipeTitle" class="col-sm-6 col-md-6 col-lg-4 justify-content-center text-center">Add Your Own
+            Recipe!</h2>
+    </div>
+    <!--Form for user to enter own recipe-->
+    <div class='row justify-content-center'>
+        <h4 class=" text-center ml-3 col-sm-6 col-md-8 col-lg-8">Don't see what you are craving this week? Enter your
+            own recipe here:</h4>
+    </div>
+    <div id="formForUserToCreateOwnRecipe" class="row justify-content-center">
+        <form id="userCreateRecipe">
+            <div class="form-group">
+                <label for="recipeName">Name of recipe:</label>
+                <input type="text" id="recipeName" placeholder="e.g.: Fried Rice">
+            </div>
+            <div class="form-group">
+                <label for="ingredient">Name, amount, and cut of ingredient:</label>
+                <input type="text" id="ingredientName" placeholder="e.g.: onions">
+                <input type="number" id="ingredientAmount" min="0" max="100" placeholder="0.0">
+                <select name='measurments' id="measurments">
+                    <option class="measurment" value="tsp">tsp</option>
+                    <option class="measurment" value="Tbsp">Tbsp</option>
+                    <option class="measurment" value="cup">cup</option>
+                    <option class="measurment" value="cups">cups</option>
+                    <option class="measurment" value="oz">oz</option>
+                    <option class="measurment" value="lb">lb</option>
+                    <option class="measurment" value="whole">whole</option>
+                </select>
+                <input type="text" id="ingredientCut" placeholder="e.g.: chopped">
+                <button id="addIngredient">Add</button>
+            </div>
+            <!--div so that added ingredients can display on the page for user to visually see and even edit added ingredients if they need -->
+            <div class="from-group">
+                <ul id="userIngredientList"></ul>
+            </div>
+            <div class="form-group">
+                <label for="cookingInstructions">Step by step cooking Instructions:</label>
+                <!-- <input type="text" id="cookingInstructions"> -->
+                <textarea id="cookingInstructions"></textarea>
+                <button id="addCookingStep">Add step</button>
+            </div>
+            <!--div so that added instructions can display on the page for user to visually see and even edit added instructions if they need -->
+            <div class="from-group">
+                <ol id="userInstructionList"></ol>
+            </div>
+            <div class="row justify-content-center">
+                <button id="addUsersRecipe">Add Your Recipe </button>
+            </div>
+        </form>
+    </div>
+    <!--Footer-->
+    <footer class="row justify-content-start">
+        <p class="pr-3 pt-2">Copyright &copy; Amanda Testerman 2021</p>
+    </footer>
+    <script src="https://cdn.tlm.cloud/jquery/3.3.1/jquery-3.3.1.min.js"
+        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+        crossorigin="anonymous"></script>
+    <script src="../javascript/recipes.js"></script>
+    <script src="../javascript/meals.js"></script>
+    <script src="https://cdn.tlm.cloud/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script
+        src="http://static.tlmworks.org/track_1.0/cdns/bootstrap-4/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

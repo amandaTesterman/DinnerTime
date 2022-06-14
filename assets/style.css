@@ -1,0 +1,446 @@
+body{
+    background-color: rgb(173, 5, 5);
+    color: rgb(221,230,209);
+}
+/* common css */
+.hidden{
+    display: none;
+}
+.userInstructions{
+    padding: 1rem;    
+    font-style: italic;   
+    -webkit-text-stroke: .5px rgb(129, 143, 110); 
+}
+/* =====
+header section
+====*/
+.topOfPage{
+    width: 100%;
+    height: 18rem;
+    background-image:url("./images/headerPic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 3px   rgb(129, 143, 110) solid;  
+}
+.pageTitle{
+    padding-left:9rem;     
+    margin-top: 3rem;
+    padding-top: 7rem; 
+    font-size: 72pt;
+    color: rgb(221,230,209);
+    font-family: fantasy;
+    font-weight: bolder;
+    text-shadow: rgb(79, 124, 60) 5px 5px 5px;
+}
+#navBarStyle, footer{
+    background-color: rgba(0, 0, 0, 0.8);
+
+}
+#navBarStyle a, #checklistDisplayButton, .removeRecipeFromMenuButton, footer{
+    color: rgb(129, 143, 110);
+}
+#navBarStyle a:hover, #checklistDisplayButton:hover, .removeRecipeFromMenuButton:hover{
+    color: rgb(221,230,209)
+}
+/*===
+footer
+===*/
+footer{
+    margin-top: 1rem;
+}
+/*===
+home/landing page
+===*/
+#homeImages img{
+    margin: .5rem;
+}
+#why-your-here span{
+    font-size:10pt
+}
+#homeImages img{
+    border: 5px  black double;
+}
+#subTitlequestion{
+    padding-top: 3rem;
+}
+/*====
+Meals Page
+=====*/
+.subTitletext, .recipeTitle{
+    -webkit-text-stroke: 1px rgb(129, 143, 110); 
+}
+.form-group{
+    padding: 10px;
+}
+.ingredientsList{
+    list-style: none;
+}
+.amount, .cut{
+    font-size: 10pt
+}
+/*==
+user form to enter own recipe
+==*/
+#formForUserToCreateOwnRecipe{
+    width: 70%;
+    margin: auto;
+}
+#userCreateRecipe{
+    background-image: url('./images/topBackground.jpg');
+    border: 4px solid black;
+}
+#ingredientAmount{
+    size: 2rem;
+}
+#measuremnts{
+    size: 3rem;
+}
+::placeholder {
+    color:rgb(129, 143, 110);
+    font-size: 1em;
+}
+.seeRecipeInfo{
+    border: 1px  dashed black;
+    background-color: white;
+    color: black;
+    position: absolute;
+    z-index: 2;
+    top:6.25rem;
+    left: 6.25rem;    
+}
+/*-end of form styling-*/
+.seeRecipeLink, button a,  #checklistDisplayButton, .removeRecipeFromMenuButton, #printShoppingListButton{
+    color: rgb(129, 143, 110);
+    text-shadow: black 1px 1px 1px;
+    -webkit-text-stroke: .5px beige; 
+}
+.seeRecipeLink {
+    margin-left: 25%;       
+}
+.seeRecipeLink:hover{
+    color: beige;
+}
+button a:hover{
+    color: beige;  
+}
+#recipeIngredientsInstructions {
+    height: auto;
+    width: 70%;
+    z-index:1;
+    position:absolute;
+    top: 15.5rem;
+    left:12.5rem;      
+    background-image: url('./images/redPeppers2.jpg');    
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: beige;
+    -webkit-text-stroke: .5px rgb(173, 5, 5);
+    border: 6px double rgb(79, 124, 60);   
+}
+#recipeIngredientsInstructions ul, #thisWeeksSelectedMealDetialsDisplay ul,#recipeIngredientsInstructions ol, #thisWeeksSelectedMealDetialsDisplay ol{
+    background-color: black; 
+    width:18.75rem;
+    margin-left:50px;
+    margin-top:55px;
+    opacity: .8;     
+    box-shadow: 3px 3px 7px 3px rgb(173, 5, 5), -1em 0 0.4em rgb(221,230,209);      
+}
+#recipeIngredientsInstructions ol, #thisWeeksSelectedMealDetialsDisplay ol{     
+    width:19.5rem;  
+    margin-top:55px;    
+}
+#instructions{
+    margin-right: -70px;
+}
+.recipeDiv{   
+    border: .5px double black;
+    margin:5px;    
+}
+.recipeRows{
+    margin-left: 15.5%;
+}
+.img-fluid{
+    border: .5px dotted black;
+}
+#addYourOwnRecipeDiv h2{
+    margin-top: 3rem;
+    padding-left: 3rem;
+    border-bottom: 1px beige solid;
+}
+#alertUserToSelectMeals{
+    position: absolute;
+    z-index:1;
+    top: 30rem;
+    left:20%;
+    background-color: black;
+    color: rgb(173, 5, 5);
+    -webkit-text-stroke: .5px beige;
+    height: auto;
+    width: 60%;
+    border: 3px beige dashed;
+    padding: 2rem;
+}
+/*====
+Menu Page
+===*/
+.thisWeeksMenuMeals{
+    background-image: url("./images/foodStuff.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:auto;
+    width: 100%;
+    margin-top: 1rem;
+    border: 3px   rgb(129, 143, 110) double;
+}
+.mealName{
+    font-size: 32pt;
+    text-shadow: black 3px 3px 3px; 
+    padding-left: 2rem;
+    margin: 1.25rem;
+}
+.mealName:hover{
+    color:rgb(79, 124, 60);
+    cursor: pointer; 
+}
+.removeRecipeFromMenuButton{
+    margin-right: 1rem;
+    margin-left: 1rem;
+    border-radius: 5px;
+    border: 1px double red;
+    background-color: beige;
+    margin-top: 1rem;
+    float: left;
+}
+.ingredientItem, #ingredientsToBeCheckedByUser1, #ingredientsToBeCheckedByUser2{
+    list-style: none;
+}
+.ingredientCheckbox{
+    margin-right:.25rem;
+}
+#checklistDisplayButton{   
+    border-radius: 10px;
+}
+#ingredientCheckListForCreatingShoppingList{
+    position: absolute;
+    z-index:1;
+    top: 10%;
+    left:10%;
+    background-color: beige;
+    border: 3px   rgb(129, 143, 110) double;  
+    color:red;
+    width: 80%;
+    padding: 2rem;
+    font-family: cursive;
+    margin: auto;  
+    box-shadow: 5px 5px 5px 5px black, -5px 5px 5px 5px black;  
+    /* box-shadow: 5px 5px 3px black; */
+}
+#ingredientsToBeCheckedByUser1, #ingredientsToBeCheckedByUser2, #ingredientCheckListForCreatingShoppingList h3{
+    padding-left: 6.5rem;
+}
+#checklistInstructions{
+    background-color: black;
+    color: beige;
+    border: 3px double red;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#createShoppingListButton,#closeCreateShoppingListButton{    
+    border: 5px double black;    
+}
+#closeCreateShoppingListButton{
+   color: rgb(129, 143, 110)
+}
+#createShoppingListLink{
+    color: red;
+    text-shadow: none;
+    -webkit-text-stroke: .5px black;  
+} 
+#doIHaveQuestionForCheckList{
+    border-bottom: 1px  black double;
+    margin-bottom: 1rem;
+    text-shadow: black -1px 1px 1px;
+}
+#thisWeeksSelectedMealDetialsDisplay {
+    position: absolute;
+    z-index:1;
+    top: 21.75rem;
+    left: 9.5rem;
+    background-color: rgb(0, 0, 0);
+    color:red;
+    width: 80%;   
+    background-image: url("./images/redAndGreenPeppers.jpeg"); 
+    background-repeat: no-repeat;
+    background-size:cover;
+    border: 6px double rgb(173, 5, 5);
+    color: beige;
+    -webkit-text-stroke: .5px red
+}
+#thisWeeksSelectedMealDetialsDisplay ol, #thisWeeksSelectedMealDetialsDisplay ul{
+   background-color: rgba(77, 78, 73, 0.8);
+   opacity: 1;
+}
+/*======
+shoppingList PAge
+=====*/
+.shoppingListPageImages{  
+    margin-top: 2.5rem; 
+    width: 18.75rem;
+    height: auto;
+    border: 3px black double;
+}
+.leftSidePicture{
+    margin-left: 10%;
+}
+#shoppingCartsImage{
+    margin-left:5%;
+}
+#shoppingListDiv{
+    padding: 1rem;
+    font-family: fantasy;
+    font-weight: bolder;
+    margin: 10px;
+    background-color: beige;   
+    position: relative;
+    z-index: 1;
+    height: auto;
+    width:43.75rem;;
+    border: 5px   rgb(129, 143, 110) double;  
+}
+#shoppingListHeading{
+    color: red;
+    margin: 1rem 0 2rem 10rem;
+    border-bottom: 1px black solid;
+    width: 50%;   
+}
+#shoppingListPlace,#printShoppingListButton{
+    margin-left: 10rem;
+}
+#shoppingListPlace, #displayDateShoppingListWasMade{  
+    color: red;
+}
+#placeForUserToAddOwnItems{
+    margin-left: 14rem;
+}
+.shoppingListItem{
+    list-style: none;
+}
+.removeItemFromListButton{
+    color:  rgb(129, 143, 110);
+    margin-right: 1rem;
+}
+/*====
+@media
+====*/
+/*--for ipad sizes max-width*/
+@media screen and (max-width: 768px){
+     /*-home page*/
+     #peopleGettingFood{
+        display:none;
+    }
+    #cuttinboard{
+        display: none;
+    }
+    /*-shopping list page*/
+    #shoppingPageTitle, #HomePageTitle{
+        margin-top: -2rem;
+    }
+    #allShoppingListImagesDiv{
+        display: none;
+    }
+    #shoppingListDiv{
+        width: 95%
+    }
+    #printShoppingListButton{
+        margin-left: 1rem;
+    }
+    /*-menu page-*/
+    #ingredientCheckListForCreatingShoppingList{
+        width: 95%;
+        margin-left:-50px;
+    }
+    #YourMenuPageTitle{
+        font-size: 42pt;
+    }
+}
+/*==for ipad min-width sizes*/
+@media screen and (min-width: 768px){
+   #navBarStyle{
+       padding-left: 0px;
+   }
+    /*--meals page*/
+    #recipeIngredientsInstructions{
+        left: 8rem;
+    }
+    #formForUserToCreateOwnRecipe{
+        width: 90%;
+    }
+/*--menu page*/
+   
+    #thisWeeksSelectedMealDetialsDisplay{
+        left: 5rem;
+    } 
+    /*--shopping list*/
+    #shoppingListDiv{
+        margin-left: -100px;
+    }
+}
+
+/*---for iphonex max-width sizes ===*/ 
+@media screen and (max-width: 375px){
+     .pageTitle{
+        margin-top: -1rem;
+        font-size: 52pt;
+        padding-left: 2rem; 
+    }
+    /*-mealspage */
+    #recipeIngredientsInstructions,#thisWeeksSelectedMealDetialsDisplay,#thisWeeksSelectedMealDetialsDisplay{
+        width: 90%;
+        margin-left: -180px;  
+    }
+    #ingredientsDiv,#instructionsDiv{   
+        margin-left: -60px;
+    }
+    #close{
+        margin-left:2rem;
+    }
+    #formForUserToCreateOwnRecipe{
+        width: 90%;
+        margin-left: 1.5rem;
+    }
+/*-menu page*/  
+   
+    #thisWeeksSelectedMealDetialsDisplay{    
+        margin-left: -135px;    
+    }
+    #thisWeeksSelectedMealDetialsDisplay ul, #thisWeeksSelectedMealDetialsDisplay ol{
+        margin-left: 15px;
+    }
+    #ingredientCheckListForCreatingShoppingList{
+        width: 95%;
+        margin-left:-25px;
+    }
+    #ingredientsToBeCheckedByUser1, #ingredientsToBeCheckedByUser2{
+        margin-left: -85px;
+    }
+    /*--shoppinglist page*/
+    #shoppingPageTitle{
+        margin-top: 1rem;
+    }
+    #shoppingListDiv{
+        width: 95%;
+        margin-left: .5rem;
+    }
+    #shoppingListPlace{
+        margin-left:0rem;
+    }
+    #shoppingListHeading{
+        margin-left: 5rem;
+    }
+    #placeForUserToAddOwnItems{
+        margin-left: 4rem;
+    }
+    .shoppingListPageImages{
+        display:none;
+    }
+}/*--end of 375px @media*/
