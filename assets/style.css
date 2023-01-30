@@ -1,6 +1,7 @@
 body{
     background-color: rgb(173, 5, 5);
     color: rgb(221,230,209);
+    
 }
 /* common css */
 .hidden{
@@ -47,6 +48,7 @@ footer
 ===*/
 footer{
     margin-top: 1rem;
+    
 }
 /*===
 home/landing page
